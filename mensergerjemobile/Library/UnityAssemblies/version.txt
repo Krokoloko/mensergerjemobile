@@ -1,5 +1,5 @@
 5.6.1f1:3.1.0.0
-StandaloneWindows
+iOS
 D:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll
 D:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll
 D:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll
@@ -9,3 +9,5 @@ D:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/Un
 D:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll
 D:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll
 D:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll
+D:/Program Files (x86)/Unity/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll
+D:/Program Files (x86)/Unity/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Common.dll
