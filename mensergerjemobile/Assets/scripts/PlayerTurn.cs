@@ -5,6 +5,11 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PlayerTurn : MonoBehaviour {
+
+    /// <summary>
+    /// This script will decide which player's cones can be moved depending on the player's turn
+    /// </summary>
+
     [SerializeField]
     public int players = 2;
     public string currentPlayer = "red";
@@ -69,7 +74,7 @@ public class PlayerTurn : MonoBehaviour {
                     break;
             }
         }
-        else
+        else if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Main menu"))
         {
             switch (players)
             {

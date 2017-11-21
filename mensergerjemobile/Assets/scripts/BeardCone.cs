@@ -6,6 +6,7 @@ public class BeardCone : MonoBehaviour {
 
     /// <summary>
     /// This script will move the position of the Beard Cones
+    /// This script also sends the command to switch turns
     /// </summary>
 
     private InputManager _inputManager;
@@ -38,7 +39,7 @@ public class BeardCone : MonoBehaviour {
         }
 
         // Debug
-        
+        /*
         if (Input.GetMouseButton(0))
         {
             RaycastHit hit;
@@ -59,7 +60,7 @@ public class BeardCone : MonoBehaviour {
             }
 
         }
-        
+        */
         // End of debug
 
         if (_inputManager.OneFinger())
