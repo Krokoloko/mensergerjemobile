@@ -4,13 +4,87 @@ using UnityEngine;
 
 public class BeardCone : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
+    /// <summary>
+    /// This script will move the position of the Beard Cones
+    /// </summary>
+
+    private InputManager _inputManager;
+    private string _colour = "Cone-Red";
+    public string currentColour;
+    private PlayerTurn _turn;
+
+    void Start ()
+    {
+        _inputManager = GetComponent<InputManager>();
+        _turn = GetComponent<PlayerTurn>();
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+
+	void Update ()
+    {
+        switch (currentColour)
+        {
+            case ("green"):
+                _colour = "Cone-Green";
+                break;
+            case ("yellow"):
+                _colour = "Cone-Yellow";
+                break;
+            case ("red"):
+                _colour = "Cone-Red";
+                break;
+            case ("blue"):
+                _colour = "Cone-Blue";
+                break;
+        }
+
+        // Debug
+        if (Input.GetMouseButton(0))
+        {
+            RaycastHit hit;
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            Debug.DrawRay(ray.origin, ray.direction * 100);
+            if (Physics.Raycast(ray.origin, ray.direction, out hit))
+            {
+                if (hit.collider.tag == _colour)
+                {
+                    Debug.Log("colliding with green");
+                    Transform cone = hit.collider.GetComponent<Transform>();
+                    cone.transform.position = new Vector3(hit.point.x, 1.6f, hit.point.z);
+                }
+                if (hit.collider.tag == "nextButton")
+                {
+                    _turn.NextPlayer();
+                }
+            }
+
+        }
+        // End of debug
+
+        if (_inputManager.OneFinger())
+        {
+            DragCone();
+        }
 	}
+
+    // Drags the cone
+    void DragCone()
+    {
+        Touch zero = _inputManager.touchZero;
+        RaycastHit hit;
+        Ray ray = Camera.main.ScreenPointToRay(zero.position);
+        Debug.DrawRay(ray.origin, ray.direction * 100);
+        if (Physics.Raycast(ray.origin, ray.direction, out hit))
+        {
+            if (hit.collider.tag == _colour)
+            {
+                Transform cone = hit.collider.GetComponent<Transform>();
+                cone.transform.position = new Vector3(hit.point.x, 1.6f, hit.point.z);
+            }
+            if (hit.collider.tag == "nextButton")
+            {
+                _turn.NextPlayer();
+            }
+        }
+
+    }
 }
