@@ -6,6 +6,22 @@ public class DamionsLog : MonoBehaviour {
 
     /// <summary>
     /// 
+    /// Damion's Update Log V1.2
+    /// 
+    /// Optimized Game UI
+    /// Built fixed version of the main game
+    /// 
+    /// To Do List:
+    /// - A main menu -> Working on it
+    /// - Option to choose an amount of players
+    /// - Grid snapping
+    /// - Cone kicking
+    /// - Dice rolling -> Daan is working on this
+    /// 
+    /// Next Update Log will be rolling out ASAP.
+    /// 
+    /// ----------------------------------------------------------------------------------------------------
+    /// 
     /// Damion's Update Log V1.1
     /// 
     /// Scripts created:
@@ -24,7 +40,6 @@ public class DamionsLog : MonoBehaviour {
     /// Build first test for turn system -> Buttons might be bigger
     /// 
     /// To Do List:
-    /// - Make the camera rotate around the board on mobile version
     /// - A main menu -> Daan is working on this
     /// - Option to choose an amount of players
     /// - Grid snapping

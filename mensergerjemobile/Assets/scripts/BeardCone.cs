@@ -38,6 +38,7 @@ public class BeardCone : MonoBehaviour {
         }
 
         // Debug
+        /*
         if (Input.GetMouseButton(0))
         {
             RaycastHit hit;
@@ -58,6 +59,7 @@ public class BeardCone : MonoBehaviour {
             }
 
         }
+        */
         // End of debug
 
         if (_inputManager.OneFinger())
