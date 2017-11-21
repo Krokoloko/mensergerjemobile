@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: a38f20cd1c816284b99dd3326d49a739
+timeCreated: 1511249922
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: HIGH ON FIRE
+  fontNames:
+  - HIGH ON FIRE
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
