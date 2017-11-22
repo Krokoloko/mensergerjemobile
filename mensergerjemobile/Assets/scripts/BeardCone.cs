@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BeardCone : MonoBehaviour {
+public class BeardCone : MonoBehaviour
+{
 
     /// <summary>
     /// This script will move the position of the Beard Cones
@@ -14,13 +15,13 @@ public class BeardCone : MonoBehaviour {
     public string currentColour;
     private PlayerTurn _turn;
 
-    void Start ()
+    void Start()
     {
         _inputManager = GetComponent<InputManager>();
         _turn = GetComponent<PlayerTurn>();
-	}
+    }
 
-	void Update ()
+    void Update()
     {
         switch (currentColour)
         {
@@ -47,7 +48,7 @@ public class BeardCone : MonoBehaviour {
             Debug.DrawRay(ray.origin, ray.direction * 100);
             if (Physics.Raycast(ray.origin, ray.direction, out hit))
             {
-                if (hit.collider.tag == _colour)
+                if (hit.collider.tag == "Cone-Green" || hit.collider.tag == "Cone-Blue" || hit.collider.tag == "Cone-Red" || hit.collider.tag == "Cone-Yellow")
                 {
                     Debug.Log("colliding with green");
                     Transform cone = hit.collider.GetComponent<Transform>();
@@ -67,7 +68,7 @@ public class BeardCone : MonoBehaviour {
         {
             DragCone();
         }
-	}
+    }
 
     // Drags the cone
     void DragCone()
@@ -78,7 +79,7 @@ public class BeardCone : MonoBehaviour {
         Debug.DrawRay(ray.origin, ray.direction * 100);
         if (Physics.Raycast(ray.origin, ray.direction, out hit))
         {
-            if (hit.collider.tag == _colour)
+            if (hit.collider.tag == "Cone-Green" || hit.collider.tag == "Cone-Blue" || hit.collider.tag == "Cone-Red" || hit.collider.tag == "Cone-Yellow")
             {
                 Transform cone = hit.collider.GetComponent<Transform>();
                 cone.transform.position = new Vector3(hit.point.x, 1.6f, hit.point.z);
