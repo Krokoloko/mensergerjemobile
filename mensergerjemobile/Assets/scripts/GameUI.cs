@@ -4,6 +4,11 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class GameUI : MonoBehaviour {
+
+    /// <summary>
+    /// This script manages the UI of the Main Game
+    /// </summary>
+
     [SerializeField]
     private RawImage _red;
     [SerializeField]

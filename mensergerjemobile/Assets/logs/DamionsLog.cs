@@ -6,16 +6,44 @@ public class DamionsLog : MonoBehaviour {
 
     /// <summary>
     /// 
+    /// Damion's Update Log V1.3
+    /// 
+    /// Scripts edited:
+    /// > ButtonManager.cs -> Added functions to switch between main menu and options
+    /// 
+    /// Added options menu -> Extra canvas that is toggled by a button press
+    /// Added a background to the main and options menu
+    /// 
+    /// To Do List:
+    /// - Grid snapping -> Probably for Daan
+    /// - Cone kicking -> Probably for Daan
+    /// - Dice rolling -> Daan is working on this
+    /// 
+    /// Time to sit back and enjoy some goddamn peace and quiet :þ
+    /// 
+    /// Next Update Log will be rolling out ASAP.
+    /// 
+    /// ----------------------------------------------------------------------------------------------------
+    /// 
     /// Damion's Update Log V1.2
+    /// 
+    /// Scripts edited:
+    /// > ButtonManager.cs -> (previously known as UI_Manager.cs) Renamed to prevent confusion with GameUI.cs made the buttons recolour once they are selected
+    /// > PlayerTurn.cs -> now checks for current scene to separate 2 parts of code and enable/disable the game's UI canvas
     /// 
     /// Optimized Game UI
     /// Built fixed version of the main game
+    /// Main menu expanded:
+    /// + Working buttons for player selection
+    /// + Working start button
+    /// Moved the camera center point to the menu scene to directly store game data
+    /// Added some summaries to scripts
     /// 
     /// To Do List:
-    /// - A main menu -> Working on it
-    /// - Option to choose an amount of players
-    /// - Grid snapping
-    /// - Cone kicking
+    /// - Options menu -> Working on it
+    /// - Give the main menu a makeover -> Working on it
+    /// - Grid snapping -> Probably for Daan
+    /// - Cone kicking -> Probably for Daan
     /// - Dice rolling -> Daan is working on this
     /// 
     /// Next Update Log will be rolling out ASAP.

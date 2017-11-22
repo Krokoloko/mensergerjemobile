@@ -4,24 +4,44 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+public class ButtonManager : MonoBehaviour
+{
+    /// <summary>
+    /// This script manages the main menu and stores the amount of players selected
+    /// </summary>
 
-
-public class ButtonManager : MonoBehaviour {
-
-    public GameObject playerField;
-
-    //Loads the scene from the StartLevel argument as room name.
-    public void StartButton(string StartLevel)
-	{
-
-		SceneManager.LoadScene (StartLevel);
-	}
-
-    public void SaveSetting()
+    public static ButtonManager Instance
     {
-        GameObject objectIns = Instantiate<GameObject>(new GameObject("datafromMenu"));
-        SaveSettings data = objectIns.AddComponent<SaveSettings>();
-        data.players = playerField.GetComponent<Text>().text;
-        DontDestroyOnLoad(objectIns);
+        get;
+        set;
+    }
+
+    public int players = 2;
+    [SerializeField]
+    private Canvas _menu;
+    [SerializeField]
+    private Canvas _options;
+
+    void Start()
+    {
+        DontDestroyOnLoad(transform.gameObject);
+        Instance = this;
+        _menu.enabled = true;
+        _options.enabled = false;
+
+    }
+    public void StartGame()
+    {
+        SceneManager.LoadScene("Game");
+    }
+    public void Options()
+    {
+        _menu.enabled = false;
+        _options.enabled = true;
+    }
+    public void Menu()
+    {
+        _menu.enabled = true;
+        _options.enabled = false;
     }
 }
